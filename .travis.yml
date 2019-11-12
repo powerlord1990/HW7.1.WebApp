@@ -6,5 +6,5 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_KEY
-  app: itpark-webapp
+  app: itpark-webApp
 
