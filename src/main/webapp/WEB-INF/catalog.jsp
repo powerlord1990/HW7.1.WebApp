@@ -40,7 +40,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="description">Auto Description</label>
-                                <textarea type="text" id="description" name="description" class="form-control"
+                                <textarea id="description" name="description" class="form-control"
                                           required></textarea>
                             </div>
                             <div class="custom-file">
