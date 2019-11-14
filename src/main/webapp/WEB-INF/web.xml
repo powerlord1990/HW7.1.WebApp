@@ -28,7 +28,7 @@
 
     <servlet>
         <servlet-name>error</servlet-name>
-        <jsp-file>WEB-INF/error.jsp</jsp-file>
+        <jsp-file>/WEB-INF/error.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>

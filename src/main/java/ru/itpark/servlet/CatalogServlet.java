@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.rmi.ServerException;
 import java.sql.SQLException;
 
 public class CatalogServlet extends HttpServlet {
@@ -22,9 +21,8 @@ public class CatalogServlet extends HttpServlet {
         InitialContext context = null;
         try {
             context = new InitialContext();
-            autoService = (AutoService) context.lookup("java:/comp/env/bean/auto-service");
-            fileService = (FileService) context.lookup("java:/comp/env/bean/file-service");
-
+            autoService = (AutoService) context.lookup("java:/comp/env/bean/auto-service");//
+            fileService = (FileService) context.lookup("java:/comp/env/bean/file-service");//
         } catch (NamingException e) {
             e.printStackTrace();
             throw new ServletException(e);

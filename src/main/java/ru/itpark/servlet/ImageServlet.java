@@ -20,6 +20,7 @@ public class ImageServlet extends HttpServlet {
             fileService = (FileService) context.lookup("java:/comp/env/bean/file-service");
         } catch (NamingException e) {
             e.printStackTrace();
+            throw new ServletException();
         }
     }
 
@@ -28,7 +29,7 @@ public class ImageServlet extends HttpServlet {
         if (req.getPathInfo() != null) {
             var parts = req.getPathInfo().split("/");
             if (parts.length != 2) {
-                throw new RuntimeException("Not found");
+                throw new RuntimeException("not found");
             }
             fileService.readFile(parts[1], resp.getOutputStream());
         }

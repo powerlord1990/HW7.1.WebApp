@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
-<html lang="`en`">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,6 +17,6 @@
         </div>
     </div>
 </div>
-<%@include file="bootstrap-css.jsp" %>
+<%@ include file="bootstrap-scripts.jsp" %>
 </body>
 </html>
