@@ -6,7 +6,8 @@
             type="javax.sql.DataSource"
             driverClassName="org.sqlite.JDBC"
             url="jdbc:sqlite::memory:"
-            closeMethod="close"/>
+            closeMethod="close"
+    />
     <Resource
             name="bean/auto-service"
             type="ru.itpark.service.AutoService"
