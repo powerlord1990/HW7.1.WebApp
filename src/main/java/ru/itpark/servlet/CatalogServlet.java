@@ -33,7 +33,7 @@ public class CatalogServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             req.setAttribute("items", autoService.getAll());
-            req.getRequestDispatcher("/WEB-INF.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/catalog.jsp").forward(req, resp);
         } catch (SQLException e) {
             e.printStackTrace();
             throw new ServletException(e);
