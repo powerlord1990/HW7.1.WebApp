@@ -14,7 +14,7 @@ public class FileService {
 
     public FileService() throws IOException {
         uploadPath = System.getenv("UPLOAD_PATH");
-        Files.createDirectories(get(uploadPath));
+        Files.createDirectories(Paths.get(uploadPath));
     }
 
     public void readFile(String id, ServletOutputStream os) throws IOException {
