@@ -21,8 +21,8 @@ public class CatalogServlet extends HttpServlet {
         InitialContext context = null;
         try {
             context = new InitialContext();
-            autoService = (AutoService) context.lookup("java:/comp/env/bean/auto-service");//
-            fileService = (FileService) context.lookup("java:/comp/env/bean/file-service");//
+            autoService = (AutoService) context.lookup("java:/comp/env/bean/auto-service");
+            fileService = (FileService) context.lookup("java:/comp/env/bean/file-service");
         } catch (NamingException e) {
             e.printStackTrace();
             throw new ServletException(e);
@@ -33,7 +33,7 @@ public class CatalogServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             req.setAttribute("items", autoService.getAll());
-            req.getRequestDispatcher("/WEB-INF.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/catalog.jsp").forward(req, resp);
         } catch (SQLException e) {
             e.printStackTrace();
             throw new ServletException(e);
