@@ -1,4 +1,4 @@
-package ru.itpark;
+package ru.itpark.exception;
 
 public class DataException extends RuntimeException {
 
