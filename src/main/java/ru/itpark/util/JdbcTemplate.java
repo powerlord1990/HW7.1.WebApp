@@ -1,6 +1,6 @@
 package ru.itpark.util;
 
-import ru.itpark.exception.DatasException;
+import ru.itpark.DataException;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -19,7 +19,7 @@ public class JdbcTemplate {
             return executor.execute(stmt);
         } catch (SQLException e) {
             e.printStackTrace();
-            throw new DatasException(e);
+            throw new DataException(e);
         }
     }
 
